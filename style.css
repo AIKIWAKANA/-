@@ -66,9 +66,9 @@ html {
     font-weight: bold;
   }
   .app-container {
-    width: 380px;
+    width: 450px;
     background-color: #F7F7F7;
-    height: 100vh;
+    height: 130vh;
     position: relative;
   }
   .btn-footer {
