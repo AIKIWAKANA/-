@@ -1,8 +1,9 @@
 <?php require_once 'products.php'; ?>
-<?php require_once 'functions.php'; ?>
+
+
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +19,11 @@
         <div class="cards-container">
           <?php foreach($products as $product): ?>
           <div class="card">
-            <img class="card-image" src="<?php echo $product["image"]; ?>" alt="">
-            <p class="card-title"><?php echo $product["name"]; ?></p>
+            <img class="card-image" src="<?php echo $product->getImage(); ?>" alt="">
+            <p class="card-title"><?php echo $product->getName(); ?></p>
             <div class="flex justify-between">
-              <p class="card-price"><?php echo displayPrice($product["price"]); ?></p>
-              <input name="<?php echo $product["id"]; ?>" min="0" class="item-number" type="number" value="0">
+              <p class="card-price"><?php echo $product->displayPrice(); ?></p>
+              <input name="<?php echo $product->getId(); ?>" min="0" class="item-number" type="number" value="0">
             </div>
           <?php endforeach; ?>
         </div>
